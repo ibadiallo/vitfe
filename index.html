@@ -808,7 +808,15 @@
       <div class="success-msg" id="success-msg">
         <div class="check">🎉</div>
         <h3>Bienvenue sur Vitfe !</h3>
-        <p>Nous vous contacterons sur WhatsApp très bientôt pour activer votre compte.</p>
+        <p>Votre inscription est enregistrée!</p>
+        <br/>
+        <p><strong>Prochaines étapes:</strong></p>
+        <br/>
+        <p>1. Ouvrez Telegram et cherchez <strong>@VitfeBot</strong></p>
+        <p>2. Tapez /start pour activer votre compte</p>
+        <p>3. Envoyez votre CNI au <strong>+221777527465</strong> sur WhatsApp</p>
+        <br/>
+        <a href="https://t.me/VitfeBot" style="display:inline-block;background:#FF5C00;color:white;padding:14px 28px;border-radius:10px;text-decoration:none;font-weight:700;margin-top:8px;">Ouvrir @VitfeBot →</a>
       </div>
     </div>
   </section>
@@ -819,20 +827,65 @@
     <div class="footer-sub">Le service qu'il vous faut, maintenant. · Afrique de l'Ouest · 2025</div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script>
-    function handleSubmit() {
+    const SUPABASE_URL = 'https://krpnoebwduvdwdlhozzr.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtycG5vZWJ3ZHV2ZHdkbGhvenpyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODI1OTUzMzAsImV4cCI6MjA5ODE3MTMzMH0.3S27OpqDH61nGPciDFB8ab4Io8atO_2Rkm_G4vQWx7k';
+    const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    async function handleSubmit() {
       const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
       const phone = document.getElementById('phone').value.trim();
       const category = document.getElementById('category').value;
       const city = document.getElementById('city').value.trim();
+      const country = document.getElementById('country').value;
 
       if (!firstName || !phone || !category || !city) {
         alert('Veuillez remplir tous les champs obligatoires.');
         return;
       }
 
-      document.getElementById('signup-form').style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
+      const btn = document.querySelector('.btn-submit');
+      btn.textContent = 'Inscription en cours...';
+      btn.disabled = true;
+
+      try {
+        const { data, error } = await db
+          .from('providers')
+          .insert([{
+            first_name: firstName,
+            last_name: lastName,
+            phone: phone,
+            category: category,
+            city: city,
+            country: country,
+            is_available: true,
+            is_verified: false,
+            password: Math.random().toString(36).slice(-8)
+          }]);
+
+        if (error) {
+          if (error.code === '23505') {
+            alert('Ce numero est deja inscrit sur Vitfe!');
+          } else {
+            console.error(error);
+            alert('Erreur lors de l inscription. Reessayez.');
+          }
+          btn.textContent = "M'inscrire gratuitement →";
+          btn.disabled = false;
+          return;
+        }
+
+        document.getElementById('signup-form').style.display = 'none';
+        document.getElementById('success-msg').style.display = 'block';
+
+      } catch (err) {
+        console.error(err);
+        alert('Erreur de connexion. Reessayez.');
+        btn.textContent = "M'inscrire gratuitement →";
+        btn.disabled = false;
+      }
     }
   </script>
 
