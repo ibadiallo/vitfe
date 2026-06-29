@@ -1133,19 +1133,6 @@
   <script>
     let currentLang = 'fr';
 
-    function toggleLang() {
-      currentLang = currentLang === 'fr' ? 'en' : 'fr';
-      document.getElementById('lang-btn').textContent = currentLang === 'fr' ? '🌍 EN' : '🌍 FR';
-      document.documentElement.lang = currentLang;
-
-      // Update all elements with data-i18n
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        const val = i18n[currentLang][key];
-        if (val !== undefined) el.innerHTML = val;
-      });
-    }
-
     const i18n = {
       fr: {
         'hero-badge': 'Disponible partout en Afrique de l'Ouest',
@@ -1272,6 +1259,17 @@
         'footer-disclaimer': 'Vitfe is a connection platform only. Vitfe is not responsible for the quality of services provided by providers.',
       }
     };
+
+    function toggleLang() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      document.getElementById('lang-btn').textContent = currentLang === 'fr' ? '🌍 EN' : '🌍 FR';
+      document.documentElement.lang = currentLang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = i18n[currentLang][key];
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
   </script>
 
 </body>
