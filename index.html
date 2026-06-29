@@ -716,15 +716,15 @@
     <div style="display:flex; gap:12px; align-items:center;">
       <a href="#faq" style="font-family:'Space Grotesk',sans-serif; font-size:14px; color:#888; text-decoration:none;" data-fr="FAQ" data-en="FAQ">FAQ</a>
       <button onclick="toggleLang()" id="lang-btn" style="background:#1a1a1a; border:1px solid #2a2a2a; color:#fff; padding:8px 14px; border-radius:8px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; cursor:pointer;">🌍 EN</button>
-      <a href="#signup" class="nav-cta" data-fr="Rejoindre Vitfe" data-en="Join Vitfe">Rejoindre Vitfe</a>
+      <a href="#signup" class="nav-cta" data-i18n="nav-join">Rejoindre Vitfe</a>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
     <div class="hero-badge" data-i18n="hero-badge">Disponible partout en Afrique de l'Ouest</div>
-    <h1>Besoin d'aide ?<br /><em>Un message suffit.</em></h1>
-    <p class="hero-sub">
+    <h1 data-i18n="hero-h1">Besoin d'aide ?<br /><em>Un message suffit.</em></h1>
+    <p class="hero-sub" data-i18n="hero-sub">
       Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.
     </p>
     <div class="hero-actions">
@@ -1135,6 +1135,7 @@
 
     const i18n = {
       fr: {
+        "nav-join": "Rejoindre Vitfe",
         "hero-badge": "Disponible partout en Afrique de l'Ouest",
         "hero-h1": "Besoin d'aide ?<br/><em>Un message suffit.</em>",
         "hero-sub": "Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.",
@@ -1197,6 +1198,7 @@
         "footer-disclaimer": "Vitfe est une plateforme de mise en relation uniquement. Vitfe n'est pas responsable de la qualité des services fournis par les prestataires."
       },
       en: {
+        "nav-join": "Join Vitfe",
         "hero-badge": "Available across West Africa",
         "hero-h1": "Need help?<br/><em>One message is all it takes.</em>",
         "hero-sub": "Send your request on Telegram. Vitfe finds the right service provider near you — mechanic, electrician, plumber, tailor and more.",
