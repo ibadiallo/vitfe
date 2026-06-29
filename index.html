@@ -652,6 +652,46 @@
     color: var(--white);
   }
 
+  /* FAQ */
+  .faq-item {
+    background: var(--dark);
+    padding: 24px 28px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .faq-item:hover { background: #222; }
+
+  .faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--white);
+  }
+
+  .faq-icon {
+    color: var(--orange);
+    font-size: 22px;
+    font-weight: 300;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+
+  .faq-answer {
+    display: none;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--grey);
+    line-height: 1.7;
+  }
+
+  .faq-item.open .faq-answer { display: block; }
+  .faq-item.open .faq-icon { transform: rotate(45deg); }
+
   @media (max-width: 700px) {
     .about-card {
       flex-direction: column;
@@ -673,7 +713,11 @@
   <!-- NAV -->
   <nav>
     <div class="logo">Vit<span>fe</span></div>
-    <a href="#signup" class="nav-cta">Rejoindre Vitfe</a>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <a href="#about" style="font-family:'Space Grotesk',sans-serif; font-size:14px; color:#888; text-decoration:none; display:none;" id="nav-links">À propos</a>
+      <a href="#faq" style="font-family:'Space Grotesk',sans-serif; font-size:14px; color:#888; text-decoration:none;">FAQ</a>
+      <a href="#signup" class="nav-cta">Rejoindre Vitfe</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -916,6 +960,64 @@
     </div>
   </section>
 
+  <!-- FAQ -->
+  <div class="divider"></div>
+  <section id="faq" style="padding: 80px 24px; max-width: 900px; margin: 0 auto;">
+    <div class="section-label" style="text-align:center;">FAQ</div>
+    <div class="section-title" style="text-align:center;">Questions<br/>fréquentes.</div>
+    <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 2px; background: #1a1a1a; border-radius: 20px; overflow: hidden;">
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>C'est vraiment gratuit?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Oui, Vitfe est 100% gratuit pour les utilisateurs. Les prestataires peuvent également s'inscrire gratuitement. Un badge de vérification ⭐ optionnel est disponible pour les prestataires qui souhaitent apparaître en premier dans les résultats.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment fonctionne Vitfe?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Ouvrez @VitfeBot sur Telegram, décrivez votre besoin, donnez votre adresse à Dakar — Vitfe trouve automatiquement le meilleur prestataire disponible près de vous et vous met en contact en quelques minutes.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment devenir prestataire vérifié?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Inscrivez-vous sur vitfe.vercel.app ou directement sur @VitfeBot, puis envoyez une photo de votre CNI recto-verso à notre WhatsApp (+221 77 752 74 65). Votre compte sera vérifié sous 24h.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Est-ce disponible en dehors de Dakar?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Pour l'instant, Vitfe opère à Dakar. Nous prévoyons d'étendre le service à d'autres villes du Sénégal et à toute l'Afrique de l'Ouest très prochainement.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Comment sont vérifiés les prestataires?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Chaque prestataire doit fournir une copie de sa Carte Nationale d'Identité (CNI). Nous vérifions manuellement chaque document avant d'activer le compte. Les prestataires sont également notés par les clients après chaque service.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Que faire si le prestataire ne se présente pas?</span>
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-answer">Contactez-nous immédiatement sur WhatsApp au +221 77 752 74 65 ou par email à vitfeservice@gmail.com. Nous traiterons votre réclamation et le prestataire concerné sera sanctionné.</div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <div class="divider"></div>
   <section style="padding: 80px 24px; max-width: 900px; margin: 0 auto; text-align: center;">
@@ -1017,6 +1119,14 @@
         btn.textContent = "M'inscrire gratuitement →";
         btn.disabled = false;
       }
+    }
+  </script>
+
+  <script>
+    function toggleFaq(el) {
+      const isOpen = el.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) el.classList.add('open');
     }
   </script>
 
