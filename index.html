@@ -732,7 +732,7 @@
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
         Essayer sur Telegram
       </a>
-      <a href="#signup" class="btn-primary" data-i18n="hero-btn-provider">Je suis prestataire →</a>
+      <a href="#signup" class="btn-primary" data-i18n="hero-btn-provider" data-i18n="hero-btn-provider">Je suis prestataire →</a>
       <p class="hero-note" data-i18n="hero-note">100% gratuit · Fonctionne sur Telegram</p>
     </div>
   </section>
@@ -744,15 +744,15 @@
     <div class="stats-grid">
       <div class="stat">
         <div class="stat-number">400M+</div>
-        <div class="stat-label">personnes en<br/>Afrique de l'Ouest</div>
+        <div class="stat-label" data-i18n="stat-1-label">personnes en Afrique de l'Ouest</div>
       </div>
       <div class="stat">
         <div class="stat-number">1 msg</div>
-        <div class="stat-label">pour trouver<br/>n'importe quel service</div>
+        <div class="stat-label" data-i18n="stat-2-label">pour trouver n'importe quel service</div>
       </div>
       <div class="stat">
         <div class="stat-number">0 CFA</div>
-        <div class="stat-label">pour les<br/>utilisateurs</div>
+        <div class="stat-label" data-i18n="stat-3-label">pour les utilisateurs</div>
       </div>
     </div>
   </section>
@@ -761,8 +761,8 @@
 
   <!-- DEMO -->
   <section class="demo-section">
-    <div class="section-label">Comment ça marche</div>
-    <div class="section-title">Envoyez,<br/>on s'occupe du reste.</div>
+    <div class="section-label" data-i18n="demo-label">Comment ça marche</div>
+    <div class="section-title" data-i18n="demo-title">Envoyez,<br/>on s'occupe du reste.</div>
     <div class="whatsapp-phone">
       <div class="phone-header">
         <div class="phone-avatar">V</div>
@@ -800,8 +800,8 @@
 
   <!-- HOW IT WORKS -->
   <section class="how-section">
-    <div class="section-label">Le processus</div>
-    <div class="section-title">Simple.<br/>Rapide. Fiable.</div>
+    <div class="section-label" data-i18n="steps-label">Le processus</div>
+    <div class="section-title" data-i18n="steps-title">Simple.<br/>Rapide. Fiable.</div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
@@ -825,8 +825,8 @@
 
   <!-- CATEGORIES -->
   <section class="categories-section">
-    <div class="section-label">Catégories</div>
-    <div class="section-title">Tout service,<br/>un seul numéro.</div>
+    <div class="section-label" data-i18n="cat-label">Catégories</div>
+    <div class="section-title" data-i18n="cat-title">Tout service,<br/>un seul numéro.</div>
     <div class="categories-grid">
       <div class="category-card"><span class="category-icon">🔧</span><div class="category-name">Mécanicien</div></div>
       <div class="category-card"><span class="category-icon">❄️</span><div class="category-name">Frigo / Clim</div></div>
@@ -866,26 +866,26 @@
 
   <!-- SIGNUP -->
   <section class="signup-section" id="signup">
-    <div class="section-label" style="text-align:center;">Prestataires</div>
-    <div class="section-title" style="text-align:center;">Recevez des clients.<br/>Gratuitement.</div>
+    <div class="section-label" style="text-align:center;" data-i18n="signup-label">Prestataires</div>
+    <div class="section-title" style="text-align:center;" data-i18n="signup-title">Recevez des clients.<br/>Gratuitement.</div>
     <div class="signup-card">
       <div id="signup-form">
         <div class="form-row">
           <div class="form-group">
-            <label>Prénom</label>
+            <label data-i18n="label-firstname">Prénom</label>
             <input type="text" id="firstName" placeholder="Iba" />
           </div>
           <div class="form-group">
-            <label>Nom</label>
+            <label data-i18n="label-lastname">Nom</label>
             <input type="text" id="lastName" placeholder="Diallo" />
           </div>
         </div>
         <div class="form-group">
-          <label>Numéro WhatsApp</label>
+          <label data-i18n="label-phone">Numéro WhatsApp</label>
           <input type="tel" id="phone" placeholder="+221 77 000 00 00" />
         </div>
         <div class="form-group">
-          <label>Votre métier</label>
+          <label data-i18n="label-job">Votre métier</label>
           <select id="category">
             <option value="" disabled selected>Choisir une catégorie</option>
             <option>Mécanicien</option>
@@ -903,11 +903,11 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Ville</label>
+            <label data-i18n="label-city">Ville</label>
             <input type="text" id="city" placeholder="Dakar" />
           </div>
           <div class="form-group">
-            <label>Pays</label>
+            <label data-i18n="label-country">Pays</label>
             <select id="country">
               <option>Sénégal</option>
               <option>Côte d'Ivoire</option>
@@ -922,7 +922,7 @@
           </div>
         </div>
         <button class="btn-submit" onclick="handleSubmit()" data-i18n="btn-submit">M'inscrire gratuitement →</button>
-        <p class="form-note">Gratuit pour toujours. Badge vérifié ⭐ à 1 000 CFA/mois.</p>
+        <p class="form-note" data-i18n="form-note">Gratuit pour toujours. Badge vérifié ⭐ à 1 000 CFA/mois.</p>
       </div>
       <div class="success-msg" id="success-msg">
         <div class="check">🎉</div>
@@ -943,12 +943,12 @@
   <!-- ABOUT -->
   <div class="divider"></div>
   <section class="about-section">
-    <div class="section-label" style="text-align:center;">L'équipe</div>
-    <div class="section-title" style="text-align:center;">Qui est derrière<br/>Vitfe?</div>
+    <div class="section-label" style="text-align:center;" data-i18n="about-label">L'équipe</div>
+    <div class="section-title" style="text-align:center;" data-i18n="about-title">Qui est derrière<br/>Vitfe?</div>
     <div class="about-card">
       <img src="https://media.licdn.com/dms/image/v2/C4E03AQE80O6IKpdf2Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644710502726?e=1784160000&v=beta&t=EgnTFmZmphaZRh3fqzr3EmfsM169EdUWssZ5XHzXs3k" alt="Iba Diallo" class="about-photo" />
       <div>
-        <div class="about-badge" data-i18n="about-badge">👤 Fondateur & CEO</div>
+        <div class="about-badge" data-i18n="about-role">👤 Fondateur & CEO</div>
         <div class="about-name">Ibrahima "Iba" Diallo</div>
         <div class="about-title">Dakar, Sénégal 🇸🇳</div>
         <p class="about-text">
@@ -963,56 +963,56 @@
   <!-- FAQ -->
   <div class="divider"></div>
   <section id="faq" style="padding: 80px 24px; max-width: 900px; margin: 0 auto;">
-    <div class="section-label" style="text-align:center;">FAQ</div>
-    <div class="section-title" style="text-align:center;">Questions<br/>fréquentes.</div>
+    <div class="section-label" style="text-align:center;" data-i18n="faq-label">FAQ</div>
+    <div class="section-title" style="text-align:center;" data-i18n="faq-title">Questions<br/>fréquentes.</div>
     <div style="margin-top: 40px; display: flex; flex-direction: column; gap: 2px; background: #1a1a1a; border-radius: 20px; overflow: hidden;">
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>C'est vraiment gratuit?</span>
+          <span data-i18n="faq-q1">C'est vraiment gratuit?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Oui, Vitfe est 100% gratuit pour les utilisateurs. Les prestataires peuvent également s'inscrire gratuitement. Un badge de vérification ⭐ optionnel est disponible pour les prestataires qui souhaitent apparaître en premier dans les résultats.</div>
+        <div class="faq-answer" data-i18n="faq-a1">Oui, Vitfe est 100% gratuit pour les utilisateurs. Les prestataires peuvent également s'inscrire gratuitement. Un badge de vérification ⭐ optionnel est disponible pour les prestataires qui souhaitent apparaître en premier dans les résultats.</div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>Comment fonctionne Vitfe?</span>
+          <span data-i18n="faq-q2">Comment fonctionne Vitfe?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Ouvrez @VitfeBot sur Telegram, décrivez votre besoin, donnez votre adresse à Dakar — Vitfe trouve automatiquement le meilleur prestataire disponible près de vous et vous met en contact en quelques minutes.</div>
+        <div class="faq-answer" data-i18n="faq-a2">Ouvrez @VitfeBot sur Telegram, décrivez votre besoin, donnez votre adresse à Dakar — Vitfe trouve automatiquement le meilleur prestataire disponible près de vous et vous met en contact en quelques minutes.</div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>Comment devenir prestataire vérifié?</span>
+          <span data-i18n="faq-q3">Comment devenir prestataire vérifié?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Inscrivez-vous sur vitfe.vercel.app ou directement sur @VitfeBot, puis envoyez une photo de votre CNI recto-verso à notre WhatsApp (+221 77 752 74 65). Votre compte sera vérifié sous 24h.</div>
+        <div class="faq-answer" data-i18n="faq-a3">Inscrivez-vous sur vitfe.vercel.app ou directement sur @VitfeBot, puis envoyez une photo de votre CNI recto-verso à notre WhatsApp (+221 77 752 74 65). Votre compte sera vérifié sous 24h.</div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>Est-ce disponible en dehors de Dakar?</span>
+          <span data-i18n="faq-q4">Est-ce disponible en dehors de Dakar?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Pour l'instant, Vitfe opère à Dakar. Nous prévoyons d'étendre le service à d'autres villes du Sénégal et à toute l'Afrique de l'Ouest très prochainement.</div>
+        <div class="faq-answer" data-i18n="faq-a4">Pour l'instant, Vitfe opère à Dakar. Nous prévoyons d'étendre le service à d'autres villes du Sénégal et à toute l'Afrique de l'Ouest très prochainement.</div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>Comment sont vérifiés les prestataires?</span>
+          <span data-i18n="faq-q5">Comment sont vérifiés les prestataires?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Chaque prestataire doit fournir une copie de sa Carte Nationale d'Identité (CNI). Nous vérifions manuellement chaque document avant d'activer le compte. Les prestataires sont également notés par les clients après chaque service.</div>
+        <div class="faq-answer" data-i18n="faq-a5">Chaque prestataire doit fournir une copie de sa Carte Nationale d'Identité (CNI). Nous vérifions manuellement chaque document avant d'activer le compte. Les prestataires sont également notés par les clients après chaque service.</div>
       </div>
 
       <div class="faq-item" onclick="toggleFaq(this)">
         <div class="faq-question">
-          <span>Que faire si le prestataire ne se présente pas?</span>
+          <span data-i18n="faq-q6">Que faire si le prestataire ne se présente pas?</span>
           <span class="faq-icon">+</span>
         </div>
-        <div class="faq-answer">Contactez-nous immédiatement sur WhatsApp au +221 77 752 74 65 ou par email à vitfeservice@gmail.com. Nous traiterons votre réclamation et le prestataire concerné sera sanctionné.</div>
+        <div class="faq-answer" data-i18n="faq-a6">Contactez-nous immédiatement sur WhatsApp au +221 77 752 74 65 ou par email à vitfeservice@gmail.com. Nous traiterons votre réclamation et le prestataire concerné sera sanctionné.</div>
       </div>
 
     </div>
@@ -1021,8 +1021,8 @@
   <!-- CONTACT -->
   <div class="divider"></div>
   <section style="padding: 80px 24px; max-width: 900px; margin: 0 auto; text-align: center;">
-    <div class="section-label" style="text-align:center;">Contact</div>
-    <div class="section-title" style="text-align:center;">On est là<br/>pour vous.</div>
+    <div class="section-label" style="text-align:center;" data-i18n="contact-label">Contact</div>
+    <div class="section-title" style="text-align:center;" data-i18n="contact-title">On est là<br/>pour vous.</div>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 40px;">
       
       <a href="mailto:vitfeservice@gmail.com" style="text-decoration:none;">
@@ -1057,7 +1057,7 @@
     <div class="footer-logo">Vit<span>fe</span></div>
     <div class="footer-sub" data-i18n="footer-sub">Le service qu'il vous faut, maintenant. · Afrique de l'Ouest · 2026</div>
     <div style="margin-top:12px; font-size:12px; color:#333;">vitfeservice@gmail.com · +221 77 752 74 65</div>
-    <div style="margin-top:8px; font-size:11px; color:#2a2a2a;">Vitfe est une plateforme de mise en relation uniquement. Vitfe n'est pas responsable de la qualité des services fournis par les prestataires.</div>
+    <div style="margin-top:8px; font-size:11px; color:#2a2a2a;" data-i18n="footer-disclaimer">Vitfe est une plateforme de mise en relation uniquement. Vitfe n'est pas responsable de la qualité des services fournis par les prestataires.</div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
@@ -1133,71 +1133,63 @@
   <script>
     let currentLang = 'fr';
 
-    const translations = {
+    function toggleLang() {
+      currentLang = currentLang === 'fr' ? 'en' : 'fr';
+      document.getElementById('lang-btn').textContent = currentLang === 'fr' ? '🌍 EN' : '🌍 FR';
+      document.documentElement.lang = currentLang;
+
+      // Update all elements with data-i18n
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const val = i18n[currentLang][key];
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
+
+    const i18n = {
       fr: {
-        // Nav
-        'nav-join': 'Rejoindre Vitfe',
-        // Hero
         'hero-badge': 'Disponible partout en Afrique de l'Ouest',
-        'hero-h1': 'Besoin d'aide ?<br /><em>Un message suffit.</em>',
+        'hero-h1': 'Besoin d'aide ?<br/><em>Un message suffit.</em>',
         'hero-sub': 'Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.',
-        'hero-btn-telegram': 'Essayer sur Telegram',
+        'hero-btn-tg': 'Essayer sur Telegram',
         'hero-btn-provider': 'Je suis prestataire →',
         'hero-note': '100% gratuit · Fonctionne sur Telegram',
-        // Stats
-        'stat-1': 'personnes en
-Afrique de l'Ouest',
-        'stat-2': 'pour trouver
-n'importe quel service',
-        'stat-3': 'pour les
-utilisateurs',
-        // Demo
+        'stat-1-label': 'personnes en Afrique de l'Ouest',
+        'stat-2-label': 'pour trouver n'importe quel service',
+        'stat-3-label': 'pour les utilisateurs',
         'demo-label': 'Comment ça marche',
         'demo-title': 'Envoyez,<br/>on s'occupe du reste.',
         'demo-msg-1': 'Mon frigo s'est gaté ce matin 😩',
         'demo-msg-2': '🔍 Compris ! Je cherche un technicien frigo près de vous. Quelle est votre ville ?',
         'demo-msg-3': 'Dakar, Plateau',
-        'demo-msg-4': '✅ Trouvé ! 3 techniciens disponibles près de vous. Iba Diallo arrive dans ~20 min. Voulez-vous confirmer ?',
+        'demo-msg-4': '✅ Trouvé ! 3 techniciens disponibles. Iba Diallo arrive dans ~20 min. Confirmer ?',
         'demo-msg-5': 'Oui, confirmer ✅',
-        // Steps
         'steps-label': 'Le processus',
         'steps-title': 'Simple.<br/>Rapide. Fiable.',
         'step-1-title': 'Décrivez votre besoin',
         'step-1-desc': 'En français, en wolof, en anglais — peu importe. Vitfe comprend tout.',
         'step-2-title': 'Vitfe trouve le bon prestataire',
-        'step-2-desc': 'L'IA identifie le bon service et contacte les prestataires vérifiés près de chez vous.',
+        'step-2-desc': 'Le bon service est identifié et les prestataires vérifiés près de vous sont contactés.',
         'step-3-title': 'Confirmez & c'est réglé',
         'step-3-desc': 'Le prestataire arrive. Vous payez directement. Vitfe ne prend aucune commission.',
-        // Categories
         'cat-label': 'Catégories',
         'cat-title': 'Tout service,<br/>un seul numéro.',
-        // Countries
         'countries-label': 'Disponible dans',
         'countries-title': 'Toute l'Afrique<br/>de l'Ouest.',
-        // Signup
         'signup-label': 'Prestataires',
         'signup-title': 'Recevez des clients.<br/>Gratuitement.',
         'label-firstname': 'Prénom',
         'label-lastname': 'Nom',
         'label-phone': 'Numéro WhatsApp',
-        'label-category': 'Votre métier',
+        'label-job': 'Votre métier',
         'label-city': 'Ville',
         'label-country': 'Pays',
         'btn-submit': 'M'inscrire gratuitement →',
         'form-note': 'Gratuit pour toujours. Badge vérifié ⭐ à 1 000 CFA/mois.',
-        'success-title': 'Bienvenue sur Vitfe !',
-        'success-p1': 'Votre inscription est enregistrée!',
-        'success-steps': 'Prochaines étapes:',
-        'success-step1': '1. Ouvrez Telegram et cherchez <strong>@VitfeBot</strong>',
-        'success-step2': '2. Tapez /start pour activer votre compte',
-        'success-step3': '3. Envoyez votre CNI au <strong>+221777527465</strong> sur WhatsApp',
-        'success-btn': 'Ouvrir @VitfeBot →',
-        // About
         'about-label': 'L'équipe',
         'about-title': 'Qui est derrière<br/>Vitfe?',
-        'about-badge': '👤 Fondateur & CEO',
+        'about-role': '👤 Fondateur & CEO',
         'about-bio': 'Je m'appelle Ibrahima, plus connu sous <strong>Iba Diallo</strong>. Né et grandi au Sénégal, j'ai toujours vécu la réalité de notre économie informelle — trouver un bon mécanicien, un plombier fiable, un électricien de confiance, ça prend des heures et ça dépend toujours du bouche-à-oreille.<br/><br/>J'ai créé <strong>Vitfe</strong> pour changer ça. Une seule application, un seul message, et vous trouvez le bon prestataire en quelques minutes — partout en Afrique de l'Ouest.<br/><br/><strong>Vitfe, c'est pour nous. 🇸🇳</strong>',
-        // FAQ
         'faq-label': 'FAQ',
         'faq-title': 'Questions<br/>fréquentes.',
         'faq-q1': 'C'est vraiment gratuit?',
@@ -1212,67 +1204,53 @@ utilisateurs',
         'faq-a5': 'Chaque prestataire doit fournir une copie de sa Carte Nationale d'Identité (CNI). Nous vérifions manuellement chaque document avant d'activer le compte. Les prestataires sont également notés par les clients après chaque service.',
         'faq-q6': 'Que faire si le prestataire ne se présente pas?',
         'faq-a6': 'Contactez-nous immédiatement sur WhatsApp au +221 77 752 74 65 ou par email à vitfeservice@gmail.com. Nous traiterons votre réclamation et le prestataire concerné sera sanctionné.',
-        // Contact
         'contact-label': 'Contact',
         'contact-title': 'On est là<br/>pour vous.',
-        // Footer
         'footer-sub': 'Le service qu'il vous faut, maintenant. · Afrique de l'Ouest · 2026',
         'footer-disclaimer': 'Vitfe est une plateforme de mise en relation uniquement. Vitfe n'est pas responsable de la qualité des services fournis par les prestataires.',
       },
       en: {
-        'nav-join': 'Join Vitfe',
         'hero-badge': 'Available across West Africa',
-        'hero-h1': 'Need help?<br /><em>One message is all it takes.</em>',
+        'hero-h1': 'Need help?<br/><em>One message is all it takes.</em>',
         'hero-sub': 'Send your request on Telegram. Vitfe finds the right service provider near you — mechanic, electrician, plumber, tailor and more.',
-        'hero-btn-telegram': 'Try on Telegram',
+        'hero-btn-tg': 'Try on Telegram',
         'hero-btn-provider': 'I'm a provider →',
         'hero-note': '100% free · Works on Telegram',
-        'stat-1': 'people in
-West Africa',
-        'stat-2': 'to find
-any service',
-        'stat-3': 'for
-users',
+        'stat-1-label': 'people in West Africa',
+        'stat-2-label': 'to find any service',
+        'stat-3-label': 'for users',
         'demo-label': 'How it works',
         'demo-title': 'Send a message,<br/>we handle the rest.',
         'demo-msg-1': 'My fridge broke down this morning 😩',
         'demo-msg-2': '🔍 Got it! Looking for a fridge technician near you. What is your city?',
         'demo-msg-3': 'Dakar, Plateau',
-        'demo-msg-4': '✅ Found! 3 technicians available near you. Iba Diallo arrives in ~20 min. Confirm?',
+        'demo-msg-4': '✅ Found! 3 technicians available. Iba Diallo arrives in ~20 min. Confirm?',
         'demo-msg-5': 'Yes, confirm ✅',
         'steps-label': 'The process',
         'steps-title': 'Simple.<br/>Fast. Reliable.',
         'step-1-title': 'Describe your need',
         'step-1-desc': 'In French, Wolof, English — whatever you prefer. Vitfe understands everything.',
         'step-2-title': 'Vitfe finds the right provider',
-        'step-2-desc': 'AI identifies the right service and contacts verified providers near you.',
+        'step-2-desc': 'The right service is identified and verified providers near you are contacted.',
         'step-3-title': 'Confirm & it's done',
         'step-3-desc': 'The provider arrives. You pay directly. Vitfe takes zero commission.',
         'cat-label': 'Categories',
         'cat-title': 'Any service,<br/>one number.',
         'countries-label': 'Available in',
-        'countries-title': 'All of
-West Africa.',
+        'countries-title': 'All of<br/>West Africa.',
         'signup-label': 'Providers',
         'signup-title': 'Get clients.<br/>For free.',
         'label-firstname': 'First name',
         'label-lastname': 'Last name',
         'label-phone': 'WhatsApp number',
-        'label-category': 'Your profession',
+        'label-job': 'Your profession',
         'label-city': 'City',
         'label-country': 'Country',
         'btn-submit': 'Sign up for free →',
         'form-note': 'Free forever. Verified badge ⭐ at 1,000 CFA/month.',
-        'success-title': 'Welcome to Vitfe!',
-        'success-p1': 'Your registration is saved!',
-        'success-steps': 'Next steps:',
-        'success-step1': '1. Open Telegram and search <strong>@VitfeBot</strong>',
-        'success-step2': '2. Type /start to activate your account',
-        'success-step3': '3. Send your ID to <strong>+221777527465</strong> on WhatsApp',
-        'success-btn': 'Open @VitfeBot →',
         'about-label': 'The team',
         'about-title': 'Who is behind<br/>Vitfe?',
-        'about-badge': '👤 Founder & CEO',
+        'about-role': '👤 Founder & CEO',
         'about-bio': 'My name is Ibrahima, better known as <strong>Iba Diallo</strong>. Born and raised in Senegal, I have always lived the reality of our informal economy — finding a good mechanic, a reliable plumber, a trustworthy electrician takes hours and always depends on word of mouth.<br/><br/>I created <strong>Vitfe</strong> to change that. One app, one message, and you find the right service provider in minutes — anywhere in West Africa.<br/><br/><strong>Vitfe is for us. 🇸🇳</strong>',
         'faq-label': 'FAQ',
         'faq-title': 'Frequently asked<br/>questions.',
@@ -1286,7 +1264,7 @@ West Africa.',
         'faq-a4': 'For now, Vitfe operates in Dakar. We plan to expand to other cities in Senegal and across West Africa very soon.',
         'faq-q5': 'How are providers verified?',
         'faq-a5': 'Every provider must submit a copy of their national ID. We manually verify each document before activating the account. Providers are also rated by clients after each service.',
-        'faq-q6': 'What if the provider doesn't show up?',
+        'faq-q6': 'What if the provider does not show up?',
         'faq-a6': 'Contact us immediately on WhatsApp at +221 77 752 74 65 or by email at vitfeservice@gmail.com. We will handle your complaint and the provider will be sanctioned.',
         'contact-label': 'Contact',
         'contact-title': 'We're here<br/>for you.',
@@ -1294,23 +1272,6 @@ West Africa.',
         'footer-disclaimer': 'Vitfe is a connection platform only. Vitfe is not responsible for the quality of services provided by providers.',
       }
     };
-
-    // Add data-i18n attributes to all translatable elements
-    function applyTranslations(lang) {
-      const t = translations[lang];
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (t[key]) el.innerHTML = t[key];
-      });
-      // Update lang toggle button
-      document.getElementById('lang-btn').textContent = lang === 'fr' ? '🌍 EN' : '🌍 FR';
-      document.documentElement.lang = lang;
-    }
-
-    function toggleLang() {
-      currentLang = currentLang === 'fr' ? 'en' : 'fr';
-      applyTranslations(currentLang);
-    }
   </script>
 
 </body>
