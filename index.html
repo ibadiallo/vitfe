@@ -8,6 +8,7 @@
   <meta http-equiv="Expires" content="0" />
   <title>Vitfe — Le service qu'il vous faut, maintenant</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -655,6 +656,62 @@
     color: var(--white);
   }
 
+  /* PROVIDER CARD IN DEMO */
+  .provider-card {
+    align-self: flex-start;
+    background: #1f2c34;
+    border-radius: 12px;
+    padding: 12px;
+    width: 88%;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .provider-card-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center top;
+    flex-shrink: 0;
+  }
+
+  .provider-card-info { flex: 1; }
+
+  .provider-card-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .provider-card-job {
+    font-size: 11px;
+    color: #999;
+    margin: 2px 0;
+  }
+
+  .provider-card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: #0f3d2e;
+    color: #4ade80;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-top: 4px;
+  }
+
+  .provider-card-badge i { font-size: 11px; }
+
+  .provider-card-rating {
+    font-size: 11px;
+    color: #FFB800;
+    margin-top: 4px;
+  }
+
   /* FAQ */
   .faq-item {
     background: var(--dark);
@@ -779,6 +836,15 @@
         <div class="msg msg-vitfe"><span data-i18n="demo-msg-2">🔍 Compris ! Je cherche un technicien frigo près de vous. Quelle est votre ville ?</span><div class="msg-time">08:42</div></div>
         <div class="msg msg-user"><span data-i18n="demo-msg-3">Dakar, Plateau</span><div class="msg-time">08:43</div></div>
         <div class="msg msg-vitfe"><span data-i18n="demo-msg-4">✅ Trouvé ! 3 techniciens disponibles. Iba Diallo arrive dans ~20 min. Confirmer ?</span><div class="msg-time">08:43</div></div>
+        <div class="provider-card">
+          <img src="https://media.licdn.com/dms/image/v2/C4E03AQE80O6IKpdf2Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644710502726?e=1784160000&v=beta&t=EgnTFmZmphaZRh3fqzr3EmfsM169EdUWssZ5XHzXs3k" alt="Iba Diallo" class="provider-card-photo" />
+          <div class="provider-card-info">
+            <div class="provider-card-name">Iba Diallo</div>
+            <div class="provider-card-job" data-i18n="cat-fridge">Frigo / Clim</div>
+            <div class="provider-card-badge"><i class="ti ti-check"></i> <span data-i18n="provider-verified">Vérifié</span></div>
+            <div class="provider-card-rating">★★★★★ 4.8 (32)</div>
+          </div>
+        </div>
         <div class="msg msg-user"><span data-i18n="demo-msg-5">Oui, confirmer ✅</span><div class="msg-time">08:44</div></div>
       </div>
     </div>
@@ -1124,6 +1190,7 @@
     const i18n = {
       fr: {
         "nav-join": "Rejoindre Vitfe",
+        "provider-verified": "Vérifié",
         "hero-badge": "Disponible partout en Afrique de l'Ouest",
         "hero-h1": "Besoin d'aide ?<br/><em>Un message suffit.</em>",
         "hero-sub": "Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.",
@@ -1200,6 +1267,7 @@
       },
       en: {
         "nav-join": "Join Vitfe",
+        "provider-verified": "Verified",
         "hero-badge": "Available across West Africa",
         "hero-h1": "Need help?<br/><em>One message is all it takes.</em>",
         "hero-sub": "Send your request on Telegram. Vitfe finds the right service provider near you — mechanic, electrician, plumber, tailor and more.",
