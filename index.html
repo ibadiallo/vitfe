@@ -781,21 +781,165 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
-    <div class="hero-badge" data-i18n="hero-badge">Disponible partout en Afrique de l'Ouest</div>
-    <h1 data-i18n="hero-h1">Besoin d'aide ?<br /><em>Un message suffit.</em></h1>
-    <p class="hero-sub" data-i18n="hero-sub">
-      Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.
-    </p>
-    <div class="hero-actions">
-      <a href="https://t.me/VitfeBot" class="btn-whatsapp">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
-        <span data-i18n="hero-btn-tg">Essayer sur Telegram</span>
-      </a>
-      <a href="#signup" class="btn-primary" data-i18n="hero-btn-provider">Je suis prestataire →</a>
-      <p class="hero-note" data-i18n="hero-note">100% gratuit · Fonctionne sur Telegram</p>
+  <section class="hero" style="min-height:100vh; display:flex; align-items:center; justify-content:center; gap:60px; padding:120px 40px 80px; flex-wrap:wrap; position:relative; overflow:hidden;">
+
+    <!-- Glow -->
+    <div style="position:absolute; top:-150px; left:40%; width:500px; height:500px; background:radial-gradient(circle, rgba(255,92,0,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+
+    <!-- Left: Text -->
+    <div style="flex:1; min-width:280px; max-width:480px; z-index:1;">
+      <div class="hero-badge" data-i18n="hero-badge" style="opacity:0; animation:fadeUp 0.5s 0.2s forwards;">Disponible partout en Afrique de l'Ouest</div>
+      <h1 data-i18n="hero-h1" style="opacity:0; animation:fadeUp 0.5s 0.4s forwards;">Besoin d'aide ?<br /><em>Un message suffit.</em></h1>
+      <p class="hero-sub" data-i18n="hero-sub" style="opacity:0; animation:fadeUp 0.5s 0.6s forwards;">
+        Envoyez votre problème sur Telegram. Vitfe trouve le bon prestataire près de chez vous — mécanicien, électricien, plombier, couturier et bien plus.
+      </p>
+      <div class="hero-actions" style="opacity:0; animation:fadeUp 0.5s 0.8s forwards;">
+        <a href="https://t.me/VitfeBot" class="btn-whatsapp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L8.32 14.173l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.828.386z"/></svg>
+          <span data-i18n="hero-btn-tg">Essayer sur Telegram</span>
+        </a>
+        <a href="#signup" class="btn-primary" data-i18n="hero-btn-provider">Je suis prestataire →</a>
+        <p class="hero-note" data-i18n="hero-note">100% gratuit · Fonctionne sur Telegram</p>
+      </div>
     </div>
+
+    <!-- Right: Animated Phone -->
+    <div style="flex-shrink:0; opacity:0; animation:fadeUp 0.6s 0.5s forwards; z-index:1;">
+      <div style="width:260px; background:#111; border-radius:28px; border:1px solid #222; overflow:hidden; box-shadow:0 40px 80px rgba(0,0,0,0.6);">
+        <!-- Phone header -->
+        <div style="background:#1f2c34; padding:14px 16px; display:flex; align-items:center; gap:10px;">
+          <div style="width:34px; height:34px; border-radius:50%; background:#FF5C00; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:white; flex-shrink:0;">V</div>
+          <div>
+            <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:white;">@VitfeBot</div>
+            <div style="font-size:11px; color:#25D366;">● En ligne</div>
+          </div>
+        </div>
+        <!-- Chat body -->
+        <div style="background:#0b141a; padding:16px 12px; min-height:340px; display:flex; flex-direction:column; gap:10px;">
+
+          <div id="hm1" style="max-width:82%; padding:9px 13px; border-radius:10px 10px 2px 10px; font-size:13px; color:white; background:#005c4b; align-self:flex-end; opacity:0; transition:opacity 0.4s, transform 0.4s; transform:translateY(8px);" data-i18n-hero="hero-chat-1">Mon frigo s'est gaté 😩</div>
+
+          <div id="ht1" style="display:flex; gap:4px; align-items:center; background:#1f2c34; padding:9px 13px; border-radius:10px 10px 10px 2px; align-self:flex-start; opacity:0; width:52px;">
+            <div class="chat-dot"></div><div class="chat-dot" style="animation-delay:0.2s"></div><div class="chat-dot" style="animation-delay:0.4s"></div>
+          </div>
+
+          <div id="hm2" style="max-width:85%; padding:9px 13px; border-radius:10px 10px 10px 2px; font-size:13px; color:white; background:#1f2c34; align-self:flex-start; opacity:0; transition:opacity 0.4s, transform 0.4s; transform:translateY(8px);" data-i18n-hero="hero-chat-2">🔍 Quelle est votre ville ?</div>
+
+          <div id="hm3" style="max-width:82%; padding:9px 13px; border-radius:10px 10px 2px 10px; font-size:13px; color:white; background:#005c4b; align-self:flex-end; opacity:0; transition:opacity 0.4s, transform 0.4s; transform:translateY(8px);" data-i18n-hero="hero-chat-3">Dakar, Plateau</div>
+
+          <div id="ht2" style="display:flex; gap:4px; align-items:center; background:#1f2c34; padding:9px 13px; border-radius:10px 10px 10px 2px; align-self:flex-start; opacity:0; width:52px;">
+            <div class="chat-dot"></div><div class="chat-dot" style="animation-delay:0.2s"></div><div class="chat-dot" style="animation-delay:0.4s"></div>
+          </div>
+
+          <!-- Provider card -->
+          <div id="hm4" style="align-self:flex-start; background:#1f2c34; border-radius:10px; padding:10px; width:88%; display:flex; gap:8px; align-items:flex-start; opacity:0; transition:opacity 0.4s, transform 0.4s; transform:translateY(8px);">
+            <img src="https://media.licdn.com/dms/image/v2/C4E03AQE80O6IKpdf2Q/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1644710502726?e=1784160000&v=beta&t=EgnTFmZmphaZRh3fqzr3EmfsM169EdUWssZ5XHzXs3k" style="width:44px; height:44px; border-radius:6px; object-fit:cover; object-position:center top; flex-shrink:0;" />
+            <div>
+              <div style="font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:600; color:white;">Iba Diallo</div>
+              <div style="font-size:11px; color:#888; margin:2px 0;" data-i18n-hero="hero-card-job">Technicien Frigo/Clim</div>
+              <div style="display:inline-flex; align-items:center; gap:3px; background:#0f3d2e; color:#4ade80; font-size:10px; padding:2px 7px; border-radius:100px; margin-top:3px;" data-i18n-hero="hero-card-verified">✓ Vérifié</div>
+              <div style="font-size:10px; color:#FFB800; margin-top:3px;">★★★★★ 4.8 (32)</div>
+            </div>
+          </div>
+
+          <div id="hm5" style="max-width:82%; padding:9px 13px; border-radius:10px 10px 2px 10px; font-size:13px; color:white; background:#005c4b; align-self:flex-end; opacity:0; transition:opacity 0.4s, transform 0.4s; transform:translateY(8px);" data-i18n-hero="hero-chat-5">Oui, confirmer ✅</div>
+
+        </div>
+      </div>
+    </div>
+
   </section>
+
+  <style>
+    @keyframes fadeUp {
+      from { opacity:0; transform:translateY(14px); }
+      to { opacity:1; transform:translateY(0); }
+    }
+    .chat-dot {
+      width:5px; height:5px; border-radius:50%; background:#555;
+      animation:chatBounce 1.2s infinite;
+    }
+    @keyframes chatBounce {
+      0%,60%,100% { transform:translateY(0); }
+      30% { transform:translateY(-4px); background:#888; }
+    }
+  </style>
+
+  <script>
+    function heroShow(id, delay) {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, delay);
+    }
+    function heroHide(id, delay) {
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(8px)';
+      }, delay);
+    }
+
+    function runHeroChat() {
+      heroShow('hm1', 500);
+      heroShow('ht1', 1100);
+      heroHide('ht1', 1900);
+      heroShow('hm2', 2000);
+      heroShow('hm3', 2800);
+      heroShow('ht2', 3400);
+      heroHide('ht2', 4400);
+      heroShow('hm4', 4500);
+      heroShow('hm5', 5500);
+      setTimeout(resetHeroChat, 8000);
+    }
+
+    function resetHeroChat() {
+      ['hm1','hm2','hm3','hm4','hm5','ht1','ht2'].forEach(id => heroHide(id, 0));
+      setTimeout(runHeroChat, 600);
+    }
+
+    setTimeout(runHeroChat, 800);
+
+    // Hook into i18n toggle for hero chat bubbles
+    const heroTranslations = {
+      fr: {
+        'hero-chat-1': "Mon frigo s'est gaté 😩",
+        'hero-chat-2': "🔍 Quelle est votre ville ?",
+        'hero-chat-3': "Dakar, Plateau",
+        'hero-chat-5': "Oui, confirmer ✅",
+        'hero-card-job': "Technicien Frigo/Clim",
+        'hero-card-verified': "✓ Vérifié"
+      },
+      en: {
+        'hero-chat-1': "My fridge broke down 😩",
+        'hero-chat-2': "🔍 What is your city?",
+        'hero-chat-3': "Dakar, Plateau",
+        'hero-chat-5': "Yes, confirm ✅",
+        'hero-card-job': "Fridge/AC Technician",
+        'hero-card-verified': "✓ Verified"
+      }
+    };
+
+    const _origToggle = typeof toggleLang === 'function' ? toggleLang : null;
+    function updateHeroChatLang(lang) {
+      document.querySelectorAll('[data-i18n-hero]').forEach(el => {
+        const key = el.getAttribute('data-i18n-hero');
+        if (heroTranslations[lang] && heroTranslations[lang][key]) {
+          el.textContent = heroTranslations[lang][key];
+        }
+      });
+    }
+
+    const origToggleLang = window.toggleLang;
+    window.toggleLang = function() {
+      if (origToggleLang) origToggleLang();
+      const lang = document.getElementById('lang-btn').textContent.includes('FR') ? 'en' : 'fr';
+      updateHeroChatLang(lang);
+    };
+  </script>
 
   <div class="divider"></div>
 
