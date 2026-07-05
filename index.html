@@ -78,11 +78,13 @@
     .hero {
       min-height: 100vh;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-      padding: 120px 24px 80px;
-      text-align: center;
+      gap: 60px;
+      padding: 120px 40px 80px;
+      text-align: left;
       position: relative;
       overflow: hidden;
     }
@@ -154,7 +156,7 @@
     .hero-actions {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
     }
 
@@ -811,7 +813,7 @@
           <div style="width:34px; height:34px; border-radius:50%; background:#FF5C00; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:14px; color:white; flex-shrink:0;">V</div>
           <div>
             <div style="font-family:'Space Grotesk',sans-serif; font-size:14px; font-weight:600; color:white;">@VitfeBot</div>
-            <div style="font-size:11px; color:#25D366;">● En ligne</div>
+            <div style="font-size:11px; color:#25D366;" id="hero-online">● En ligne</div>
           </div>
         </div>
         <!-- Chat body -->
@@ -906,6 +908,7 @@
     // Hook into i18n toggle for hero chat bubbles
     const heroTranslations = {
       fr: {
+        'hero-online': '● En ligne',
         'hero-chat-1': "Mon frigo s'est gaté 😩",
         'hero-chat-2': "🔍 Quelle est votre ville ?",
         'hero-chat-3': "Dakar, Plateau",
@@ -914,6 +917,7 @@
         'hero-card-verified': "✓ Vérifié"
       },
       en: {
+        'hero-online': '● Online',
         'hero-chat-1': "My fridge broke down 😩",
         'hero-chat-2': "🔍 What is your city?",
         'hero-chat-3': "Dakar, Plateau",
@@ -931,6 +935,8 @@
           el.textContent = heroTranslations[lang][key];
         }
       });
+      const onlineEl = document.getElementById('hero-online');
+      if (onlineEl && heroTranslations[lang]) onlineEl.textContent = heroTranslations[lang]['hero-online'];
     }
 
     const origToggleLang = window.toggleLang;
